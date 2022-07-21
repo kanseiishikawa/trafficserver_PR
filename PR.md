@@ -34,3 +34,19 @@ autopep8とclang-formatの対象をを変更したファイルのみに変更
 
 # [#8943](https://github.com/apache/trafficserver/pull/8943) Fix doc formatting for rate_limit plugin
 rate_limitプラグインのドキュメントフォーマットを修正
+
+# [#8942](https://github.com/apache/trafficserver/pull/8942) Fix doc formatting for plugin remap_stats
+remap_statsのドキュメント修正
+
+# [#8940](https://github.com/apache/trafficserver/pull/8940) Fix the body_buffer AuTest for 10-Dev
+body_bufferのAutestの修正
+出力をstderrからtraffic.outに変更
+
+# [#8937](https://github.com/apache/trafficserver/pull/8937) Add nullptr check of HTTPInfo
+cache_info.object_readのnullチェックの追加
+
+# [#8935](https://github.com/apache/trafficserver/pull/8935) Make clang-format not modify ink_autoconf.h.in and ink_autoconf.h
+ink_autoconf.h.inとink_autoconf.hをautoconfを使って作成した後にbuildをしてclang-formatをするとmakeが再び呼び出された時にほとんどのファイルを再構築することになるため修正
+
+# [#8932](https://github.com/apache/trafficserver/pull/8932) Initialize TLSTunnelSupport on startup
+起動時にTLSTunnelSupportを初期化
