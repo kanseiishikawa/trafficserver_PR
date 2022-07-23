@@ -86,3 +86,39 @@ JSONRPC: エンコードにJSONを採用したプロトコルの一種
 # [#8922](https://github.com/apache/trafficserver/pull/8922) Use std::variant to clean up handling of unmarshal functions.
 std::variantを使ってunmarshal関数をきれいに
 std::variant: 格納される候補の型を切り替えながら使用できる記憶型
+
+# [#8921](https://github.com/apache/trafficserver/pull/8921) stek_share test: compare output with the correct Process
+stek_shareのautestでtraffic.outを検証するように変更
+
+# [#8919](https://github.com/apache/trafficserver/pull/8919) AuTest: bind stdout/stderr to traffic.out
+autestのstdout/stderrをtraffic.outに変更
+
+# [#8916](https://github.com/apache/trafficserver/pull/8916) JSONRPC: replace std::string with std::string_view when registring a new endpoint
+std::stringをstd::string_viewに変更して余計な領域を持たないように変更
+std::string_view: 文字列の所有権を持っていなくて参照して文字列を扱う
+
+# [#8912](https://github.com/apache/trafficserver/pull/8912) uri_signing plugin: Fix missing payload validation for the iss field
+payloadの検証の追加
+payload: パケット通信でパケットに含まれるヘッダーなどの付加的情報を除いたデータ本体
+
+# [#8911](https://github.com/apache/trafficserver/pull/8911) Override LogField constructor to avoid reinterpret_cast at call site
+reinterpret_castをしないように修正
+reinterpret_cast: ポインタが他のポインタに変換される
+
+# [#8910](https://github.com/apache/trafficserver/pull/8910) Pin Jinja2 for doc builds
+buildの際のJinja2のバージョン固定
+
+# [#8909](https://github.com/apache/trafficserver/pull/8909) Move HKDF to OpenSSL 3 interfaces
+HKDFをOpenSSL3へ移行
+HKDF: 鍵導出関数
+
+# [#8906](https://github.com/apache/trafficserver/pull/8906) Fix autest uses of File exists parameter
+autestのファイルの存在確認のパラメーターの修正
+
+# [#8905](https://github.com/apache/trafficserver/pull/8905) File change monitoring on s3_auth
+s3_authでのファイル変更監視のAPIを追加
+--watch-configのフラグを介して設定変更を監視する
+
+# [#8904](https://github.com/apache/trafficserver/pull/8904) iocore/cache test_Alternate: up timeout to allow vc to write out
+[#8775](https://github.com/apache/trafficserver/pull/8775)の修正
+書き出すためのタイムアウトを1から3に変更
